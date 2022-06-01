@@ -8,9 +8,12 @@ function UsersSection() {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    fetch("https://randomuser.me/api/?results=10")
+    fetch("https://randomuser.me/api/?results=5")
       .then((res) => res.json())
-      .then((parsedData) => setUser(parsedData.data));
+      .then((parsedData) => {
+        console.log(parsedData.results);
+        setUser(parsedData.results);
+      });
   }, []);
 
   return (

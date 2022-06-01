@@ -4,7 +4,7 @@ import UsersListItem from "./UsersListItem";
 function UsersList({ user }) {
   return (
     <div className="scroll-container">
-      <ul class="users-list">
+      <ul className="users-list">
         {user.map((userMap, index) => {
           return <UsersListItem userMap={userMap} key={index} />;
         })}
